@@ -1,0 +1,20 @@
+Trabalho Final Sistemas de Banco de Dados I
+Parte 1
+
+Integrantes: 
+Beatriz Ribeiro Borges - 12021BSI231
+Laura Rosado Rodrigues Muniz - 12021BSI216
+Sara Rosado Rodrigues Muniz - 12021BSI215
+
+
+
+Requisitos adicionais:
+
+Entidade Juíz que forma uma hierarquia, podendo ser um Juíz de Campo ou um Juíz de Var, possuindo como atributo a nacionalidade e, respectivamente, a confederação em que ele trabalha e o seu curso/formação. A própria entidade herda os requisitos de Participante mantendo a cardinalidade original.
+Além disso, existem as entidades Ingresso e Torcedor, sendo que um torcedor compra um ingresso para um ou vários jogos. Os atributos da entidade Ingresso são id, seção, número da cadeira, valor do ingresso e data. Já os atributos da entidade Torcedor são cpf, nome e data de nascimento. 
+Com essa nova relação, um jogo pode vender um ou mais ingressos e um ingresso pode ser vendido para vários jogos.
+
+Requisitos originais adaptados:
+
+Assumimos que um jogador joga em um evento da copa sendo ele titular ou reserva, assim como um técnico treina em um evento da copa. Para poder armazenar os jogadores titulares
+temos os jogadores atuando em um jogo que estão em um time participante do evento. Como são dois times participantes em cada jogo temos duas relações, time 1 e time 2 .Na relação do time com o evento e o jogo guarda-se a quantidade de gols.
