@@ -1,0 +1,41 @@
+1) *Mapear entidades regulares(forte);
+   *Criar relação com todos os atributos simples da entidade;
+   *Escolher chave primária;
+   *Colocar ou não atributo derivado.
+
+
+2) *Mapear entidades fracas;
+   *Criar uma relação com todos os atributos simples;
+   *Inserir como chave estrangeira os atributos que são chave primária das entidades 
+fortes identificadoras com quem a entidade fraca se relaciona;
+   *Chave primária = chaves primárias das Entidades Fortes + chave parcial Entidade Fraca;
+
+3) *Mapear relacionamento (1:1);
+   *Identificar as entidades que participam do relacionamento;
+   *Três opções:
+	+ Escolha da chave estrangeira;
+	+ Juntar as duas tabelas;
+	+ Nova tabela com um dos campos chave e o outro unique.
+   
+   *Escolha da chave estrangeira:
+	- Escolher uma das relações e inserir nela, como chave estrangeira, a chave primária
+da outra relação;
+	- Incluir os atributos simples do relacionamento como atributos da relação escolhida.
+
+4) *Mapear relacionamento (1:N);
+   *Inserir na relação do lado N a chave primária do lado 1, que será uma chave estrangeira;
+   *O mapeamento de atributos vai para a relação do lado N também.
+
+5) *Mapear relacionamento (N:M);
+   *Criar nova relação(tabela);
+   *Inserir, como chave estrangeira, as chaves primárias das entidades envolvidas no relacionamento;
+   *A chave primária é a concatenação dessas chaves estrangeiras
+   *Mapear os atributos simples do relacionamento nessa nova relação.
+
+6) *Mapear atributos multivalorados;
+   *Criar nova relação para cada atributo e mapeá-lo;
+   *Incluir como chave estrangeira, a chave primária da relação que representa a entidade que contém
+o atributo multivalorado;
+   *Se o atributo multivalorado for composto, mapear seus atributos simples;
+   *A chave primária é a chave primária + atributo multivalorado;
+   *Se o atributo for composto, deve-se escolher qual fará parte da chave primária.
